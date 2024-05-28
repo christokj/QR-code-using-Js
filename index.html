@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+</head>
+
+<body>
+    <div id="qrcode"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        const details = `BEGIN:VCARD
+VERSION:3.0
+FN: Christo K J
+TEL: 6282130289
+EMAIL: christokj2@gmail.com
+END:VCARD`;
+
+        const qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: details,
+            width: 128,
+            height: 128
+        });
+    </script>
+</body>
+
+</html>
